@@ -21,63 +21,63 @@ function Star({ className }: { className?: string }) {
   );
 }
 
+/** Portrait scales from the image — no fixed empty frame */
 export function HeroIllustration() {
   return (
-    <div className="relative mx-auto w-60 h-80 flex justify-center items-end overflow-hidden">
+    <div className="relative inline-flex shrink-0 items-end justify-center leading-none">
       <motion.div
-        initial={{ y: 80, opacity: 0 }}
+        initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         viewport={{ once: true }}
-        className="relative z-10 w-[11.4rem] max-w-full"
+        className="relative z-10"
       >
         <Image
           src={images.portrait}
           alt="Profile"
-          width={400}
-          height={560}
-          sizes="(max-width: 768px) 11rem, 11.4rem"
-          className="w-full h-auto object-contain object-bottom"
-          style={{ width: "100%", height: "auto" }}
+          width={800}
+          height={1200}
+          sizes="(max-width: 1024px) 55vw, 22rem"
+          className="block h-auto w-auto max-h-[min(48vh,20rem)] sm:max-h-[min(52vh,22rem)] lg:max-h-[min(58vh,28rem)] max-w-[min(72vw,18rem)] sm:max-w-[min(65vw,20rem)] lg:max-w-[min(28vw,22rem)] object-contain object-bottom"
           priority
           unoptimized
         />
       </motion.div>
       <motion.div
-        animate={{ y: [-10, 10], rotate: ["15deg", "-15deg"], scale: [0.6, 1] }}
+        animate={{ y: [-6, 6], rotate: ["15deg", "-15deg"], scale: [0.7, 1] }}
         transition={{
           ease: "easeInOut",
           duration: 5,
           repeat: Infinity,
           repeatType: "mirror",
         }}
-        className="absolute left-0 top-2/4 z-20 pointer-events-none"
+        className="absolute left-[-0.5rem] top-1/2 z-20 pointer-events-none"
       >
-        <Star className="w-8 h-8" />
+        <Star className="w-5 h-5 lg:w-6 lg:h-6" />
       </motion.div>
       <motion.div
-        animate={{ y: [-15, 5], rotate: ["15deg", "-15deg"], scale: [0.6, 1] }}
+        animate={{ y: [-8, 4], rotate: ["15deg", "-15deg"], scale: [0.7, 1] }}
         transition={{
           ease: "easeInOut",
           duration: 6,
           repeat: Infinity,
           repeatType: "mirror",
         }}
-        className="absolute right-0 top-1/3 z-20 pointer-events-none"
+        className="absolute right-[-0.25rem] top-1/3 z-20 pointer-events-none"
       >
-        <Star className="w-6 h-6" />
+        <Star className="w-4 h-4 lg:w-5 lg:h-5" />
       </motion.div>
       <motion.div
-        animate={{ scale: [0.6, 1] }}
+        animate={{ scale: [0.7, 1] }}
         transition={{
           ease: "easeInOut",
           duration: 2,
           repeat: Infinity,
           repeatType: "mirror",
         }}
-        className="absolute bottom-[-1.7rem] left-1/2 -translate-x-1/2 z-20 pointer-events-none"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 pointer-events-none"
       >
-        <Star className="w-5 h-5" />
+        <Star className="w-4 h-4" />
       </motion.div>
     </div>
   );

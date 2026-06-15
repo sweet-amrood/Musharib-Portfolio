@@ -12,6 +12,7 @@ import Image from "next/image";
 interface Repo {
   id: number;
   name: string;
+  repoSlug?: string;
   description: string | null;
   html_url: string;
   language: string | null;
@@ -114,7 +115,7 @@ export function GitHubRepos() {
               language={repo.language}
               description={repo.description}
               url={repo.html_url}
-              icon={getRepoIcon(repo.name)}
+              icon={getRepoIcon(repo.repoSlug ?? repo.name)}
             />
           ))}
         </div>

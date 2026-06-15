@@ -68,6 +68,7 @@ export async function GET(request: NextRequest) {
         return {
           id: repo.id,
           name: override?.displayName ?? repo.name,
+          repoSlug: repoName,
           description,
           html_url: repo.html_url,
           stargazers_count: repo.stargazers_count,

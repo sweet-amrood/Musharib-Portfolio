@@ -17,45 +17,41 @@ export function Hero() {
     <>
       {resumeOpen && <ResumeModal onClose={() => setResumeOpen(false)} />}
 
-      <div className="mx-auto w-fit lg:mb-10 pt-10">
-        <h1 className="text-center font-bold lg:text-3xl text-xl">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 pt-8 lg:gap-8 lg:pt-10">
+        <h1 className="text-center text-2xl font-bold leading-snug lg:text-3xl">
           I&apos;m <GradientText>{portfolio.titleGradientName}</GradientText>,{" "}
           <br />
           {portfolio.title}
         </h1>
-      </div>
 
-      <div className="mx-auto w-full flex flex-col gap-10 lg:grid lg:grid-cols-12 grid-cols-1 lg:px-40">
-        <div className="flex flex-row items-center col-span-3">
-          <div className="relative mx-auto hidden lg:block">
-            <span className="text-lg absolute right-[-20px] top-[-10px] select-none">
+        <div className="relative flex w-full flex-col items-center gap-5 lg:flex-row lg:items-end lg:justify-center lg:gap-6">
+          <div className="relative hidden shrink-0 text-right lg:block lg:max-w-[12rem] lg:pb-2">
+            <span className="absolute -right-4 -top-2 select-none text-base">
               ☀️
             </span>
-            <motion.div {...fadeUp} className="flex flex-row gap-2 items-center">
-              <span className="text-xl select-none">📍</span>
-              <h2 className="text-3xl font-bold">{portfolio.location.city}</h2>
+            <motion.div {...fadeUp} className="flex flex-row items-center justify-end gap-2">
+              <span className="select-none text-xl">📍</span>
+              <h2 className="text-2xl font-bold lg:text-3xl">{portfolio.location.city}</h2>
             </motion.div>
-            <motion.p
-              {...fadeUp}
-              className="w-full text-right text-sm text-gray-600"
-            >
+            <motion.p {...fadeUp} className="text-sm text-gray-600 lg:text-base">
               {portfolio.location.region}
             </motion.p>
           </div>
-        </div>
 
-        <div className="relative lg:col-span-6 mx-auto w-60 flex justify-center">
-          <div className="absolute right-0 bottom-[-1rem] w-20 h-20 rounded-lg bg-gradient-to-br from-[#B265FF]/30 to-[#FFA100]/30 rotate-12 hidden lg:block" />
-          <div className="absolute left-0 top-5 w-20 h-20 rounded-full bg-[#d75585]/20 hidden lg:block" />
-          <HeroIllustration />
-        </div>
+          <div className="relative shrink-0">
+            <div className="absolute -left-3 top-4 hidden h-10 w-10 rounded-full bg-[#d75585]/20 lg:block" />
+            <div className="absolute -right-2 bottom-0 hidden h-10 w-10 rotate-12 rounded-lg bg-gradient-to-br from-[#B265FF]/30 to-[#FFA100]/30 lg:block" />
+            <HeroIllustration />
+          </div>
 
-        <div className="lg:col-span-3 flex flex-row items-center mx-auto w-fit">
-          <motion.div {...fadeUp} className="relative">
-            <span className="select-none lg:w-7 w-5 relative right-7 text-4xl text-[#222222] leading-none">
+          <motion.div
+            {...fadeUp}
+            className="relative hidden shrink-0 lg:block lg:max-w-[15rem] lg:pb-2"
+          >
+            <span className="absolute -left-6 top-0 select-none text-3xl leading-none">
               &ldquo;
             </span>
-            <p className="lg:text-lg text-sm text-center">
+            <p className="text-base leading-relaxed lg:text-lg">
               {portfolio.tagline.parts.map((part, i) => (
                 <span key={i}>
                   {part.br && <br />}
@@ -69,36 +65,37 @@ export function Hero() {
             </p>
           </motion.div>
         </div>
-      </div>
 
-      <div className="w-3/12 mx-auto flex flex-row justify-end hidden lg:flex">
-        <motion.span
-          initial={{ rotate: "-25deg", y: -4, x: -2 }}
-          animate={{ rotate: "10deg", y: 4, x: 2 }}
-          transition={{ duration: 1, repeat: Infinity, repeatType: "mirror" }}
-          className="w-12 select-none text-4xl"
-        >
-          ↘
-        </motion.span>
-      </div>
+        <div className="flex flex-row flex-wrap items-center justify-center gap-3">
+          <CategoryTab active={false} onClick={() => setResumeOpen(true)}>
+            Download Resume
+          </CategoryTab>
+          <a
+            href={portfolio.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block min-w-36 rounded-full border-2 border-white bg-gradient-to-r from-[#B265FF] via-[#FF4400] to-[#FFA100] px-5 py-2.5 text-center text-white"
+          >
+            <p className="text-base font-medium lg:text-lg">Linkedin</p>
+          </a>
+        </div>
 
-      <div className="w-fit mx-auto flex flex-row justify-between gap-3 mt-10 lg:mt-2 px-4">
-        <CategoryTab active={false} onClick={() => setResumeOpen(true)}>
-          Download Resume
-        </CategoryTab>
-        <a
-          href={portfolio.linkedinUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="border-2 py-2 lg:px-5 px-3 min-w-36 rounded-full bg-gradient-to-r from-[#B265FF] via-[#FF4400] to-[#FFA100] text-white border-2 border-white inline-block text-center"
-        >
-          <p className="lg:text-base text-sm">Linkedin</p>
-        </a>
-      </div>
-
-      <div className="lg:hidden flex flex-col items-center gap-2 mt-6 text-center">
-        <p className="text-2xl font-bold">{portfolio.location.city}</p>
-        <p className="text-sm text-gray-600">{portfolio.location.region}</p>
+        <div className="flex flex-col items-center gap-1.5 text-center lg:hidden">
+          <p className="text-2xl font-bold">{portfolio.location.city}</p>
+          <p className="text-sm text-gray-600">{portfolio.location.region}</p>
+          <p className="mt-3 max-w-sm text-base leading-relaxed">
+            {portfolio.tagline.parts.map((part, i) => (
+              <span key={i}>
+                {part.br && <br />}
+                {part.highlight ? (
+                  <span className={highlightGreen}>{part.text}</span>
+                ) : (
+                  part.text
+                )}
+              </span>
+            ))}
+          </p>
+        </div>
       </div>
     </>
   );

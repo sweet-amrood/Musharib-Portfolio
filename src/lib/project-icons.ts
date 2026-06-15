@@ -1,13 +1,21 @@
-/** Experience cards + GitHub repo card logos */
+/** App logos — one icon per project (not language / tech stack). */
 export const projectIcons = {
-  weartual: "/icons/tech/react.svg",
-  foodhub: "/icons/tech/nodejs.svg",
-  ecommerce: "/icons/tech/sqlserver.svg",
-  restaurant: "/icons/tech/cplusplus.svg",
-  atm: "/icons/projects/assembly.svg",
+  weartual: "/icons/projects/weartual.svg",
+  foodhub: "/icons/projects/foodhub.svg",
+  ecommerce: "/icons/projects/ecommerce.svg",
+  restaurant: "/icons/projects/restaurant.svg",
+  atm: "/icons/projects/atm.svg",
 } as const;
 
-const repoIconByName: Record<string, string> = {
+const repoIconBySlug: Record<string, string> = {
+  "Weartual-latest": projectIcons.weartual,
+  "Web-Development-Project-REACTJS": projectIcons.foodhub,
+  "E-Commerce-Management-System": projectIcons.ecommerce,
+  "Restaurant-Ordering-System-SJF": projectIcons.restaurant,
+  "ATM-Banking-System-Project-Assembly-Language": projectIcons.atm,
+};
+
+const repoIconByDisplayName: Record<string, string> = {
   Weartual: projectIcons.weartual,
   FoodHub: projectIcons.foodhub,
   "E-Commerce-Management-System": projectIcons.ecommerce,
@@ -15,6 +23,9 @@ const repoIconByName: Record<string, string> = {
   "ATM-Banking-System-Project-Assembly-Language": projectIcons.atm,
 };
 
-export function getRepoIcon(displayName: string): string | undefined {
-  return repoIconByName[displayName];
+export function getRepoIcon(repoSlugOrDisplayName: string): string | undefined {
+  return (
+    repoIconBySlug[repoSlugOrDisplayName] ??
+    repoIconByDisplayName[repoSlugOrDisplayName]
+  );
 }

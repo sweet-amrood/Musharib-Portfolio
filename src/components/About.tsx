@@ -23,22 +23,22 @@ export function About() {
 
       <div className="lg:grid lg:grid-cols-12 lg:grid-rows-1 w-fit mx-auto lg:gap-20 gap-10 flex flex-col items-center">
         <div className="flex flex-col gap-5 lg:col-span-4 items-center">
-          <div className="h-full w-fit relative items-end justify-center flex rounded-b-full overflow-hidden min-h-96">
-            <div className="bg-[#FFA100] rounded-full h-64 w-64 relative">
+          <div className="relative flex h-80 w-80 shrink-0 items-end justify-center lg:h-[22rem] lg:w-[22rem]">
+            <div className="relative h-full w-full overflow-hidden rounded-full bg-[#FFA100]">
               <motion.div
-                initial={{ y: 60, opacity: 0 }}
+                initial={{ y: 40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 viewport={{ once: true }}
-                className="absolute bottom-[-0.2rem] left-1/2 -translate-x-1/2 rounded-b-2xl overflow-hidden w-[11rem]"
+                className="absolute inset-x-0 bottom-0 flex h-full items-end justify-center"
               >
                 <Image
                   src={images.portrait}
                   alt={portfolio.fullName}
-                  width={176}
-                  height={240}
-                  sizes="11rem"
-                  className="object-cover object-top w-full h-auto"
+                  width={400}
+                  height={560}
+                  sizes="(max-width: 1024px) 20rem, 22rem"
+                  className="h-[112%] w-auto max-w-[95%] origin-bottom object-contain object-bottom"
                   unoptimized
                   loading="lazy"
                 />

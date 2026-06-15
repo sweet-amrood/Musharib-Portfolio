@@ -33,6 +33,9 @@ const icons = {
   "linkedin.svg": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg",
   "redis.svg": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/redis.svg",
   "prisma.svg": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/prisma.svg",
+  "vite.svg": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vite.svg",
+  "python.svg": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg",
+  "intel.svg": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/intel.svg",
 };
 
 const outDir = path.join("public", "icons", "tech");

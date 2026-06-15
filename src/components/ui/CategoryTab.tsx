@@ -17,7 +17,7 @@ export function CategoryTab({ children, active, onClick }: CategoryTabProps) {
           : "border-[#222222] hover:bg-slate-100"
       }`}
     >
-      <p className="lg:text-base text-sm">{children}</p>
+      <p className="text-base lg:text-lg">{children}</p>
     </button>
   );
 }
