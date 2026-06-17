@@ -219,7 +219,7 @@ export const portfolio = {
   },
 
   about: {
-    subtitle: "More than just lines of code — my story.",
+    subtitle: "More than just lines of code.",
     location: "Lahore, Punjab, Pakistan",
     paragraphs: [
       {
@@ -229,13 +229,13 @@ export const portfolio = {
           " and focus on full-stack applications — from React frontends to Node.js backends and cloud deployment.",
       },
       {
-        text: "I work with JavaScript, TypeScript, React, Node.js, Express, MongoDB, and SQL Server, plus DevOps tooling such as Docker, Kubernetes, CI/CD, and Git.",
+        text: "I work with JavaScript, React, Node.js, Express, MongoDB, and SQL Server, plus I am learning about DevOps tooling such as Docker, Kubernetes, CI/CD, and Appache Server.",
       },
       {
         text: "My projects on ",
         bold: "GitHub (@sweet-amrood)",
         suffix:
-          " include RideShare (carpooling, work in progress), FoodHub (full-stack food ordering), Weartual, an e-commerce database in T-SQL, a restaurant scheduler in C++, and an ATM system in Assembly.",
+          " include RideShare (carpooling, work in progress), FoodHub (full-stack food ordering), Weartual western virtual try on app, an e-commerce database in T-SQL, a restaurant scheduler in C++, and an ATM system in Assembly.",
       },
       {
         text: "I'm passionate, curious, and always learning — open to internships, junior developer roles, and remote opportunities.",
