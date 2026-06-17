@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RideShare">
+  <defs>
+    <linearGradient id="rideshare-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#B265FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#rideshare-bg)"/>
+  <path fill="#fff" d="M14 38h36l-2 6H16l-2-6zm4-16h12a8 8 0 0 1 8 8v2H18v-2a8 8 0 0 1 8-8zm20 0h8a6 6 0 0 1 6 6v4H36v-4a6 6 0 0 1 6-6z"/>
+  <circle cx="22" cy="46" r="4" fill="#fff"/>
+  <circle cx="44" cy="46" r="4" fill="#fff"/>
+  <path fill="#fff" opacity=".85" d="M30 14h4v8h-4zM38 16l3 3-5 5-3-3 5-5z"/>
+</svg>

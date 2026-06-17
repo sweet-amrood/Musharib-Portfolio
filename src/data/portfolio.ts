@@ -104,12 +104,22 @@ export const portfolio = {
         demoUrl: "https://weartual.netlify.app/",
       },
       {
+        image: projectIcons.rideshare,
+        imageVariant: "logo" as const,
+        title: "RideShare — Carpooling Web Application",
+        meta: "Personal Project | JavaScript / React | Work in progress",
+        description:
+          "RideShare is a carpooling app for finding and sharing rides, built with a React frontend and Node.js backend. Currently under active development — an early prototype with core flows in place, not a completed product yet. Live demo on Netlify.",
+        demoUrl: "https://ride-pooling.netlify.app/",
+      },
+      {
         image: projectIcons.foodhub,
         imageVariant: "logo" as const,
         title: "FoodHub — Full Stack Food Ordering App",
         meta: "Academic Project | React & Node.js | LGU",
         description:
           "FoodHub is a responsive full-stack food ordering application with a React frontend and a Node.js/Express backend API. Implemented order management, connected client and server, and focused on clean UI and practical full-stack architecture.",
+        demoUrl: "https://foodieplanet.netlify.app/home",
       },
       {
         image: projectIcons.ecommerce,
@@ -180,6 +190,7 @@ export const portfolio = {
     excludeRepos: ["weartual", "Weartual", "weartual-app"],
     featuredRepos: [
       "Weartual-latest",
+      "rideshare",
       "FoodHub-REACTJS",
       "E-Commerce-Management-System",
       "Restaurant-Ordering-System-SJF",
@@ -192,10 +203,17 @@ export const portfolio = {
           "AI virtual try-on: upload a person (photo or video) and a garment image, then generate a new look. React + Vite PWA with Express, MongoDB, and Python backend — includes live camera try-on powered by Decart WebRTC.",
         demoUrl: "https://weartual.netlify.app/",
       },
+      rideshare: {
+        displayName: "RideShare",
+        description:
+          "A carpooling web app for posting and finding shared rides (React + Node.js). Work in progress — early prototype on Netlify, not a finished product yet.",
+        demoUrl: "https://ride-pooling.netlify.app/",
+      },
       "FoodHub-REACTJS": {
         displayName: "FoodHub",
         description:
           "FoodHub is a responsive full-stack food ordering web application with a React frontend and a Node.js/Express backend API for managing orders.",
+        demoUrl: "https://foodieplanet.netlify.app/home",
       },
     },
   },
@@ -217,7 +235,7 @@ export const portfolio = {
         text: "My projects on ",
         bold: "GitHub (@sweet-amrood)",
         suffix:
-          " include FoodHub (full-stack food ordering), Weartual, an e-commerce database in T-SQL, a restaurant scheduler in C++, and an ATM system in Assembly.",
+          " include RideShare (carpooling, work in progress), FoodHub (full-stack food ordering), Weartual, an e-commerce database in T-SQL, a restaurant scheduler in C++, and an ATM system in Assembly.",
       },
       {
         text: "I'm passionate, curious, and always learning — open to internships, junior developer roles, and remote opportunities.",
