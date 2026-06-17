@@ -6,8 +6,19 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="url(#rideshare-bg)"/>
-  <path fill="#fff" d="M14 38h36l-2 6H16l-2-6zm4-16h12a8 8 0 0 1 8 8v2H18v-2a8 8 0 0 1 8-8zm20 0h8a6 6 0 0 1 6 6v4H36v-4a6 6 0 0 1 6-6z"/>
-  <circle cx="22" cy="46" r="4" fill="#fff"/>
-  <circle cx="44" cy="46" r="4" fill="#fff"/>
-  <path fill="#fff" opacity=".85" d="M30 14h4v8h-4zM38 16l3 3-5 5-3-3 5-5z"/>
+  <!-- route -->
+  <path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3" opacity=".7" d="M14 22h12M38 22h12"/>
+  <!-- map pins -->
+  <path fill="#fff" d="M14 22a4 4 0 1 1 0 .01zm36 0a4 4 0 1 1 0 .01z"/>
+  <path fill="#fff" opacity=".85" d="M14 26v2h0M50 26v2h0"/>
+  <!-- car -->
+  <path fill="#fff" d="M18 34h28l3 5v5H15v-5l3-5zm4 2h6l2-3h12l2 3h6l-1 3H23l-1-3z"/>
+  <rect x="22" y="36" width="8" height="5" rx="1" fill="#2563eb" opacity=".35"/>
+  <rect x="34" y="36" width="8" height="5" rx="1" fill="#2563eb" opacity=".35"/>
+  <circle cx="22" cy="46" r="3.5" fill="#fff"/>
+  <circle cx="42" cy="46" r="3.5" fill="#fff"/>
+  <!-- carpool riders -->
+  <circle cx="28" cy="31" r="2.2" fill="#fff"/>
+  <circle cx="36" cy="31" r="2.2" fill="#fff"/>
+  <path fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity=".9" d="M30 22h4"/>
 </svg>
