@@ -11,13 +11,13 @@ export function CategoryTab({ children, active, onClick }: CategoryTabProps) {
     <button
       type="button"
       onClick={onClick}
-      className={`border-2 py-2 lg:px-5 px-3 min-w-36 rounded-full ${
+      className={`inline-flex min-h-11 min-w-36 items-center justify-center rounded-full border-2 px-5 py-2 text-base font-medium lg:text-lg ${
         active
-          ? "bg-gradient-to-r from-[#B265FF] via-[#FF4400] to-[#FFA100] text-white border-2 border-white"
+          ? "border-white bg-gradient-to-r from-[#B265FF] via-[#FF4400] to-[#FFA100] text-white"
           : "border-[#222222] hover:bg-slate-100"
       }`}
     >
-      <p className="text-base lg:text-lg">{children}</p>
+      {children}
     </button>
   );
 }

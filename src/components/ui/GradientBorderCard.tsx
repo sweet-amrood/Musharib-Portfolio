@@ -10,6 +10,7 @@ interface GradientBorderCardProps {
   imageVariant?: "logo" | "photo";
   title: string;
   meta: string;
+  demoUrl?: string;
   children: React.ReactNode;
 }
 
@@ -18,6 +19,7 @@ export function GradientBorderCard({
   imageVariant = "photo",
   title,
   meta,
+  demoUrl,
   children,
 }: GradientBorderCardProps) {
   const isLogo = imageVariant === "logo";
@@ -51,6 +53,18 @@ export function GradientBorderCard({
           <h3 className="font-bold lg:text-lg">{title}</h3>
           <p className="lg:text-sm text-xs text-[#787878]">{meta}</p>
           <p className="text-sm text-justify">{children}</p>
+          {demoUrl ? (
+            <div className="flex flex-wrap gap-2 pt-1">
+              <a
+                href={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border-2 border-white bg-gradient-to-r from-[#B265FF] via-[#FF4400] to-[#FFA100] px-3 py-1 text-xs font-medium text-white transition-opacity hover:opacity-90"
+              >
+                Live demo
+              </a>
+            </div>
+          ) : null}
         </div>
       </div>
     </motion.div>

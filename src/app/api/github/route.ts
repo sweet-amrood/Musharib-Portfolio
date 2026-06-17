@@ -65,11 +65,14 @@ export async function GET(request: NextRequest) {
           override && "description" in override
             ? override.description
             : repo.description;
+        const demoUrl =
+          override && "demoUrl" in override ? override.demoUrl : undefined;
         return {
           id: repo.id,
           name: override?.displayName ?? repo.name,
           repoSlug: repoName,
           description,
+          demoUrl,
           html_url: repo.html_url,
           stargazers_count: repo.stargazers_count,
           forks_count: repo.forks_count,

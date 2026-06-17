@@ -29,8 +29,8 @@ export const portfolio = {
       { text: " tools.", highlight: false },
     ],
   },
-  resumeUrl: "/resume.pdf",
-  resumeDownloadName: "Musharib-Rehman-Resume.pdf",
+  resumeUrl: "/simple-resume.pdf",
+  resumeDownloadName: "Musharib Rehman's Resume.pdf",
   email: "musharib.rehman@email.com",
   linkedinUrl: "https://www.linkedin.com/in/musharib-rehman-769315243/",
   githubUsername: "sweet-amrood",
@@ -50,15 +50,12 @@ export const portfolio = {
           { name: "JavaScript" },
           { name: "TypeScript" },
           { name: "React" },
-          { name: "Next.js" },
           { name: "HTML" },
           { name: "CSS" },
           { name: "Tailwind CSS" },
           { name: "Node.js" },
           { name: "Express" },
-          { name: "REST APIs" },
           { name: "C++" },
-          { name: "NestJS" },
         ],
       },
       {
@@ -71,16 +68,16 @@ export const portfolio = {
           { name: "Netlify" },
         ],
       },
-      {
-        id: "devops",
-        label: "DevOps",
-        skills: [
-          { name: "Docker" },
-          { name: "Kubernetes" },
-          { name: "CI/CD" },
-          { name: "GitHub Actions" },
-        ],
-      },
+      // {
+      //   id: "devops",
+      //   label: "DevOps",
+      //   skills: [
+      //     { name: "Docker" },
+      //     { name: "Kubernetes" },
+      //     { name: "CI/CD" },
+      //     { name: "GitHub Actions" },
+      //   ],
+      // },
       {
         id: "database",
         label: "Database",
@@ -103,7 +100,8 @@ export const portfolio = {
         title: "Weartual — Full Stack Web Application",
         meta: "Personal Project | JavaScript / TypeScript | 2025 - Present",
         description:
-          "Built Weartual, an AI virtual try-on app: upload a person photo or video plus a garment image to generate new looks, with live camera mode via Decart WebRTC. Full-stack monorepo — React + Vite frontend, Express + MongoDB + Python API, deployed on Vercel/Netlify.",
+          "Built Weartual, an AI virtual try-on app: upload a person photo or video plus a garment image to generate new looks, with live camera mode via Decart WebRTC. Full-stack monorepo — React + Vite frontend, Express + MongoDB + Python API, deployed on Netlify.",
+        demoUrl: "https://weartual.netlify.app/",
       },
       {
         image: projectIcons.foodhub,
@@ -182,7 +180,7 @@ export const portfolio = {
     excludeRepos: ["weartual", "Weartual", "weartual-app"],
     featuredRepos: [
       "Weartual-latest",
-      "Web-Development-Project-REACTJS",
+      "FoodHub-REACTJS",
       "E-Commerce-Management-System",
       "Restaurant-Ordering-System-SJF",
       "ATM-Banking-System-Project-Assembly-Language",
@@ -192,9 +190,12 @@ export const portfolio = {
         displayName: "Weartual",
         description:
           "AI virtual try-on: upload a person (photo or video) and a garment image, then generate a new look. React + Vite PWA with Express, MongoDB, and Python backend — includes live camera try-on powered by Decart WebRTC.",
+        demoUrl: "https://weartual.netlify.app/",
       },
-      "Web-Development-Project-REACTJS": {
+      "FoodHub-REACTJS": {
         displayName: "FoodHub",
+        description:
+          "FoodHub is a responsive full-stack food ordering web application with a React frontend and a Node.js/Express backend API for managing orders.",
       },
     },
   },

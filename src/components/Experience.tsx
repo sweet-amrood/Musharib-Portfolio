@@ -28,6 +28,7 @@ export function Experience() {
             imageVariant={"imageVariant" in item ? item.imageVariant : "photo"}
             title={item.title}
             meta={item.meta}
+            demoUrl={"demoUrl" in item ? item.demoUrl : undefined}
           >
             {item.description}
           </GradientBorderCard>

@@ -9,7 +9,7 @@ export const projectIcons = {
 
 const repoIconBySlug: Record<string, string> = {
   "Weartual-latest": projectIcons.weartual,
-  "Web-Development-Project-REACTJS": projectIcons.foodhub,
+  "FoodHub-REACTJS": projectIcons.foodhub,
   "E-Commerce-Management-System": projectIcons.ecommerce,
   "Restaurant-Ordering-System-SJF": projectIcons.restaurant,
   "ATM-Banking-System-Project-Assembly-Language": projectIcons.atm,

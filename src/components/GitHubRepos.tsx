@@ -15,6 +15,7 @@ interface Repo {
   repoSlug?: string;
   description: string | null;
   html_url: string;
+  demoUrl?: string;
   language: string | null;
   stargazers_count: number;
 }
@@ -23,22 +24,21 @@ function RepoCard({
   title,
   language,
   description,
-  url,
+  githubUrl,
+  demoUrl,
   icon,
 }: {
   title: string;
   language: string | null;
   description: string | null;
-  url: string;
+  githubUrl: string;
+  demoUrl?: string;
   icon?: string;
 }) {
   return (
-    <motion.a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <motion.div
       {...fadeUp}
-      className={`block overflow-hidden z-20 rounded-2xl ${gradientBorder} lg:col-span-4`}
+      className={`overflow-hidden z-20 rounded-2xl ${gradientBorder} lg:col-span-4`}
     >
       <div className="rounded-[0.9rem] bg-white p-5 min-h-36 flex flex-col gap-2 h-full">
         <div className="flex items-center gap-3">
@@ -66,8 +66,28 @@ function RepoCard({
         <p className="text-sm text-justify text-[#787878] flex-1 line-clamp-4">
           {description || "No description provided."}
         </p>
+        <div className="flex flex-wrap gap-2 pt-1">
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border-2 border-[#222222] px-3 py-1 text-xs font-medium hover:bg-slate-100 transition-colors"
+          >
+            GitHub
+          </a>
+          {demoUrl ? (
+            <a
+              href={demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border-2 border-white bg-gradient-to-r from-[#B265FF] via-[#FF4400] to-[#FFA100] px-3 py-1 text-xs font-medium text-white transition-opacity hover:opacity-90"
+            >
+              Live demo
+            </a>
+          ) : null}
+        </div>
       </div>
-    </motion.a>
+    </motion.div>
   );
 }
 
@@ -114,7 +134,8 @@ export function GitHubRepos() {
               title={repo.name}
               language={repo.language}
               description={repo.description}
-              url={repo.html_url}
+              githubUrl={repo.html_url}
+              demoUrl={repo.demoUrl}
               icon={getRepoIcon(repo.repoSlug ?? repo.name)}
             />
           ))}

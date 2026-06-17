@@ -24,7 +24,7 @@ Replace images in **`public/images/`** (used site-wide via `src/lib/images.ts`):
 - `corpo.png` — hero character overlay
 - `compass.png`, `infonacci.png`, `vdv.png` — experience logos
 
-Add **`public/resume.pdf`** for the download button.
+Add **`public/Musharib Rehman's Resume.pdf`** for the download button.
 
 Set `githubUsername` for live repo cards.
 

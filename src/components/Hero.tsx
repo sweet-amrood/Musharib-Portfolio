@@ -10,6 +10,9 @@ import { highlightGreen } from "@/lib/styles";
 import { HeroIllustration } from "./HeroIllustration";
 import { ResumeModal } from "./ResumeModal";
 
+const heroActionClass =
+  "inline-flex min-h-11 min-w-36 items-center justify-center rounded-full border-2 px-5 py-2 text-base font-medium lg:text-lg";
+
 export function Hero() {
   const [resumeOpen, setResumeOpen] = useState(false);
 
@@ -24,8 +27,8 @@ export function Hero() {
           {portfolio.title}
         </h1>
 
-        <div className="relative flex w-full flex-col items-center gap-5 lg:flex-row lg:items-end lg:justify-center lg:gap-6">
-          <div className="relative hidden shrink-0 text-right lg:block lg:max-w-[12rem] lg:pb-2">
+        <div className="grid w-full grid-cols-1 items-center gap-6 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:gap-8">
+          <div className="relative hidden lg:flex flex-col items-end justify-center text-right">
             <span className="absolute -right-4 -top-2 select-none text-base">
               ☀️
             </span>
@@ -38,15 +41,31 @@ export function Hero() {
             </motion.p>
           </div>
 
-          <div className="relative shrink-0">
-            <div className="absolute -left-3 top-4 hidden h-10 w-10 rounded-full bg-[#d75585]/20 lg:block" />
-            <div className="absolute -right-2 bottom-0 hidden h-10 w-10 rotate-12 rounded-lg bg-gradient-to-br from-[#B265FF]/30 to-[#FFA100]/30 lg:block" />
-            <HeroIllustration />
+          <div className="flex flex-col items-center gap-6">
+            <div className="relative">
+              <div className="absolute -left-3 top-4 hidden h-10 w-10 rounded-full bg-[#d75585]/20 lg:block" />
+              <div className="absolute -right-2 bottom-0 hidden h-10 w-10 rotate-12 rounded-lg bg-gradient-to-br from-[#B265FF]/30 to-[#FFA100]/30 lg:block" />
+              <HeroIllustration />
+            </div>
+
+            <div className="flex flex-row flex-wrap items-center justify-center gap-3">
+              <CategoryTab active={false} onClick={() => setResumeOpen(true)}>
+                Download Resume
+              </CategoryTab>
+              <a
+                href={portfolio.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${heroActionClass} border-white bg-gradient-to-r from-[#B265FF] via-[#FF4400] to-[#FFA100] text-white`}
+              >
+                Linkedin
+              </a>
+            </div>
           </div>
 
           <motion.div
             {...fadeUp}
-            className="relative hidden shrink-0 lg:block lg:max-w-[15rem] lg:pb-2"
+            className="relative hidden lg:flex flex-col justify-center lg:max-w-[15rem]"
           >
             <span className="absolute -left-6 top-0 select-none text-3xl leading-none">
               &ldquo;
@@ -64,20 +83,6 @@ export function Hero() {
               ))}
             </p>
           </motion.div>
-        </div>
-
-        <div className="flex flex-row flex-wrap items-center justify-center gap-3">
-          <CategoryTab active={false} onClick={() => setResumeOpen(true)}>
-            Download Resume
-          </CategoryTab>
-          <a
-            href={portfolio.linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block min-w-36 rounded-full border-2 border-white bg-gradient-to-r from-[#B265FF] via-[#FF4400] to-[#FFA100] px-5 py-2.5 text-center text-white"
-          >
-            <p className="text-base font-medium lg:text-lg">Linkedin</p>
-          </a>
         </div>
 
         <div className="flex flex-col items-center gap-1.5 text-center lg:hidden">
