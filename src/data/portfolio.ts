@@ -113,6 +113,15 @@ export const portfolio = {
         demoUrl: "https://ride-pooling.netlify.app/",
       },
       {
+        image: projectIcons.typingPractice,
+        imageVariant: "logo" as const,
+        title: "Typing Practice — MERN Web Application",
+        meta: "Personal Project | React & Node.js | MERN Stack",
+        description:
+          "Full-stack typing practice app with a React (Vite) frontend and Express + MongoDB backend. Includes user auth with JWT, practice sessions, and a structured API — deployed on Netlify with a separate API backend.",
+        demoUrl: "https://typing-learning.netlify.app/",
+      },
+      {
         image: projectIcons.foodhub,
         imageVariant: "logo" as const,
         title: "FoodHub — Full Stack Food Ordering App",
@@ -191,6 +200,7 @@ export const portfolio = {
     featuredRepos: [
       "Weartual-latest",
       "rideshare",
+      "typing-practice-web-app",
       "FoodHub-REACTJS",
       "E-Commerce-Management-System",
       "Restaurant-Ordering-System-SJF",
@@ -208,6 +218,12 @@ export const portfolio = {
         description:
           "A carpooling web app for posting and finding shared rides (React + Node.js). Work in progress — early prototype on Netlify, not a finished product yet.",
         demoUrl: "https://ride-pooling.netlify.app/",
+      },
+      "typing-practice-web-app": {
+        displayName: "Typing Practice",
+        description:
+          "MERN stack typing practice web app — React (Vite) frontend with Express, MongoDB, and JWT auth. Practice typing with a full-stack architecture and REST API.",
+        demoUrl: "https://typing-learning.netlify.app/",
       },
       "FoodHub-REACTJS": {
         displayName: "FoodHub",
@@ -235,7 +251,7 @@ export const portfolio = {
         text: "My projects on ",
         bold: "GitHub (@sweet-amrood)",
         suffix:
-          " include RideShare (carpooling, work in progress), FoodHub (full-stack food ordering), Weartual western virtual try on app, an e-commerce database in T-SQL, a restaurant scheduler in C++, and an ATM system in Assembly.",
+          " include Typing Practice (MERN), RideShare (carpooling, work in progress), FoodHub (full-stack food ordering), Weartual western virtual try on app, an e-commerce database in T-SQL, a restaurant scheduler in C++, and an ATM system in Assembly.",
       },
       {
         text: "I'm passionate, curious, and always learning — open to internships, junior developer roles, and remote opportunities.",
