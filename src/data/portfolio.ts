@@ -95,6 +95,15 @@ export const portfolio = {
     subtitle: "Where I've applied my skills to make a difference.",
     items: [
       {
+        image: projectIcons.portfolioBuilder,
+        imageVariant: "logo" as const,
+        title: "Novafolio — Portfolio Builder (MERN)",
+        meta: "Personal Project | React / Node.js | MERN Stack",
+        description:
+          "Built Novafolio, a step-by-step portfolio builder with a React + Vite frontend and Express + MongoDB backend. Features email/password auth, Google OAuth, email verification, forgot-password flow, protected routes, and Framer Motion UI — deployed on Netlify.",
+        demoUrl: "https://nova-folio.netlify.app/",
+      },
+      {
         image: projectIcons.internNext,
         imageVariant: "logo" as const,
         title: "Intern Next — Virtual Internship Platform",
@@ -207,6 +216,7 @@ export const portfolio = {
     subtitle: "Turning curiosity into functional projects.",
     excludeRepos: ["weartual", "Weartual", "weartual-app"],
     featuredRepos: [
+      "portfolio-builder",
       "intern-next",
       "Weartual-latest",
       "rideshare",
@@ -217,6 +227,12 @@ export const portfolio = {
       "ATM-Banking-System-Project-Assembly-Language",
     ],
     repoOverrides: {
+      "portfolio-builder": {
+        displayName: "Novafolio",
+        description:
+          "MERN portfolio builder — React + Vite frontend with Express, MongoDB, Google OAuth, email verification, and password reset. Step-by-step platform to build and manage portfolios. Live on Netlify.",
+        demoUrl: "https://nova-folio.netlify.app/",
+      },
       "intern-next": {
         displayName: "Intern Next",
         description:
@@ -267,7 +283,7 @@ export const portfolio = {
         text: "My projects on ",
         bold: "GitHub (@sweet-amrood)",
         suffix:
-          " include Intern Next (virtual internship platform), Typing Practice (MERN), RideShare (carpooling, work in progress), FoodHub (full-stack food ordering), Weartual western virtual try on app, an e-commerce database in T-SQL, a restaurant scheduler in C++, and an ATM system in Assembly.",
+          " include Novafolio (MERN portfolio builder), Intern Next (virtual internship platform), Typing Practice (MERN), RideShare (carpooling, work in progress), FoodHub (full-stack food ordering), Weartual western virtual try on app, an e-commerce database in T-SQL, a restaurant scheduler in C++, and an ATM system in Assembly.",
       },
       {
         text: "I'm passionate, curious, and always learning — open to internships, junior developer roles, and remote opportunities.",

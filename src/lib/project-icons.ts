@@ -1,5 +1,6 @@
 /** App logos — one icon per project (not language / tech stack). */
 export const projectIcons = {
+  portfolioBuilder: "/icons/projects/portfolio-builder.svg",
   internNext: "/icons/projects/intern-next.svg",
   weartual: "/icons/projects/weartual.svg",
   foodhub: "/icons/projects/foodhub.svg",
@@ -11,6 +12,7 @@ export const projectIcons = {
 } as const;
 
 const repoIconBySlug: Record<string, string> = {
+  "portfolio-builder": projectIcons.portfolioBuilder,
   "intern-next": projectIcons.internNext,
   "Weartual-latest": projectIcons.weartual,
   "FoodHub-REACTJS": projectIcons.foodhub,
@@ -22,6 +24,7 @@ const repoIconBySlug: Record<string, string> = {
 };
 
 const repoIconByDisplayName: Record<string, string> = {
+  Novafolio: projectIcons.portfolioBuilder,
   "Intern Next": projectIcons.internNext,
   Weartual: projectIcons.weartual,
   FoodHub: projectIcons.foodhub,
