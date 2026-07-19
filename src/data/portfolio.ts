@@ -95,6 +95,15 @@ export const portfolio = {
     subtitle: "Where I've applied my skills to make a difference.",
     items: [
       {
+        image: projectIcons.internNext,
+        imageVariant: "logo" as const,
+        title: "Intern Next — Virtual Internship Platform",
+        meta: "Personal Project | Next.js / TypeScript | 2026",
+        description:
+          "Rebuilt Intern Next, Pakistan's virtual internship platform, with Next.js App Router, TypeScript, and Tailwind CSS. Includes marketing pages, Job Portal, Student Dashboard, JWT auth with MongoDB Atlas, task tracking, and job applications — deployed on Netlify.",
+        demoUrl: "https://intern-next.netlify.app/",
+      },
+      {
         image: projectIcons.weartual,
         imageVariant: "logo" as const,
         title: "Weartual — Full Stack Web Application",
@@ -198,6 +207,7 @@ export const portfolio = {
     subtitle: "Turning curiosity into functional projects.",
     excludeRepos: ["weartual", "Weartual", "weartual-app"],
     featuredRepos: [
+      "intern-next",
       "Weartual-latest",
       "rideshare",
       "typing-practice-web-app",
@@ -207,6 +217,12 @@ export const portfolio = {
       "ATM-Banking-System-Project-Assembly-Language",
     ],
     repoOverrides: {
+      "intern-next": {
+        displayName: "Intern Next",
+        description:
+          "Pakistan's virtual internship platform — Next.js 15, TypeScript, Tailwind, MongoDB Atlas. Marketing site, Job Portal, Student Dashboard, JWT auth, tasks, and job applications. Live on Netlify.",
+        demoUrl: "https://intern-next.netlify.app/",
+      },
       "Weartual-latest": {
         displayName: "Weartual",
         description:
@@ -251,7 +267,7 @@ export const portfolio = {
         text: "My projects on ",
         bold: "GitHub (@sweet-amrood)",
         suffix:
-          " include Typing Practice (MERN), RideShare (carpooling, work in progress), FoodHub (full-stack food ordering), Weartual western virtual try on app, an e-commerce database in T-SQL, a restaurant scheduler in C++, and an ATM system in Assembly.",
+          " include Intern Next (virtual internship platform), Typing Practice (MERN), RideShare (carpooling, work in progress), FoodHub (full-stack food ordering), Weartual western virtual try on app, an e-commerce database in T-SQL, a restaurant scheduler in C++, and an ATM system in Assembly.",
       },
       {
         text: "I'm passionate, curious, and always learning — open to internships, junior developer roles, and remote opportunities.",
