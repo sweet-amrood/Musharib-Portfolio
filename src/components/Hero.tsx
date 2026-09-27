@@ -1,14 +1,24 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { portfolio } from "@/data/portfolio";
 import { fadeUp } from "@/lib/motion";
 import { GradientText } from "@/components/ui/GradientText";
 import { CategoryTab } from "@/components/ui/CategoryTab";
 import { highlightGreen } from "@/lib/styles";
-import { HeroIllustration } from "./HeroIllustration";
 import { ResumeModal } from "./ResumeModal";
+
+const FaceCanvas = dynamic(
+  () => import("./FaceCanvas").then((m) => m.FaceCanvas),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="aspect-square w-full max-w-[19rem] sm:max-w-[22rem] lg:max-w-[26rem] animate-pulse rounded-full bg-[#B265FF]/10" />
+    ),
+  }
+);
 
 const heroActionClass =
   "inline-flex min-h-11 min-w-36 items-center justify-center rounded-full border-2 px-5 py-2 text-base font-medium lg:text-lg";
@@ -45,7 +55,15 @@ export function Hero() {
             <div className="relative">
               <div className="absolute -left-3 top-4 hidden h-10 w-10 rounded-full bg-[#d75585]/20 lg:block" />
               <div className="absolute -right-2 bottom-0 hidden h-10 w-10 rotate-12 rounded-lg bg-gradient-to-br from-[#B265FF]/30 to-[#FFA100]/30 lg:block" />
-              <HeroIllustration />
+              <motion.div
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true }}
+                className="relative z-10"
+              >
+                <FaceCanvas />
+              </motion.div>
             </div>
 
             <div className="flex flex-row flex-wrap items-center justify-center gap-3">
